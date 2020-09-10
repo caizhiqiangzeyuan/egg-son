@@ -17,10 +17,7 @@ module.exports = app => {
     },
     password: {
       type: DataTypes.STRING(32),
-      allowNull: true,
-      // validate:{
-      //   isEmail: true,   //类型检测,是否是邮箱格式
-      // }
+      allowNull: true
     },
     classId: {
       type: DataTypes.BIGINT(20),

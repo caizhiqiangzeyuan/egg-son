@@ -68,21 +68,21 @@ module.exports = app => {
       type: DataTypes.INTEGER,
       /* 数据校验返回异常 customFunc自定义的校验*/
       validate: {
-          max: {
-              args: 100,
-              msg: "age is larger"
-          },
-          min: {
-              args: 1, // 不能为0 
-              msg: 'age is small'
-          },
-          customFunc(val){
-              if(val===50){
-                  console.log('dddd');
-                  //error中的string就相当于min中的msg
-                  throw new Error('Only even values are allowed!')
-              }
+        max: {
+          args: 100,
+          msg: "age is larger"
+        },
+        min: {
+          args: 1, // 不能为0 
+          msg: 'age is small'
+        },
+        customFunc(val){
+          if(val===50){
+            console.log('dddd');
+            //error中的string就相当于min中的msg
+            throw new Error('Only even values are allowed!')
           }
+        }
       }
     },
     status: {
